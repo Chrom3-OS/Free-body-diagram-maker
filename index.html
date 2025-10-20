@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Body Diagram Maker - AP Physics 1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Free Body Diagram Maker</h1>
+            <p class="subtitle">Create accurate free body diagrams for AP Physics 1</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Toolbar -->
+            <div class="toolbar">
+                <h3>Tools</h3>
+                
+                <div class="tool-section">
+                    <h4>Add Object</h4>
+                    <button id="addBox" class="tool-btn" title="Add a box object">
+                        <span>📦</span> Box
+                    </button>
+                    <button id="addCircle" class="tool-btn" title="Add a circular object">
+                        <span>⭕</span> Circle
+                    </button>
+                </div>
+
+                <div class="tool-section">
+                    <h4>Add Force</h4>
+                    <button id="addGravity" class="tool-btn force-btn" title="Add gravitational force (down)">
+                        <span>⬇️</span> Gravity (Fg)
+                    </button>
+                    <button id="addNormal" class="tool-btn force-btn" title="Add normal force (up)">
+                        <span>⬆️</span> Normal (FN)
+                    </button>
+                    <button id="addFriction" class="tool-btn force-btn" title="Add friction force">
+                        <span>⬅️</span> Friction (Ff)
+                    </button>
+                    <button id="addTension" class="tool-btn force-btn" title="Add tension force">
+                        <span>↗️</span> Tension (FT)
+                    </button>
+                    <button id="addApplied" class="tool-btn force-btn" title="Add applied force">
+                        <span>➡️</span> Applied (FA)
+                    </button>
+                    <button id="addCustom" class="tool-btn force-btn" title="Add custom force">
+                        <span>🔄</span> Custom
+                    </button>
+                </div>
+
+                <div class="tool-section">
+                    <h4>Actions</h4>
+                    <button id="deleteSelected" class="tool-btn danger" title="Delete selected element">
+                        <span>🗑️</span> Delete
+                    </button>
+                    <button id="clearAll" class="tool-btn danger" title="Clear entire diagram">
+                        <span>🔄</span> Clear All
+                    </button>
+                    <button id="exportImage" class="tool-btn" title="Export diagram as image">
+                        <span>💾</span> Export PNG
+                    </button>
+                </div>
+
+                <div class="tool-section">
+                    <h4>View Options</h4>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="showGrid" checked>
+                        <span>Show Grid</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="snapToGrid" checked>
+                        <span>Snap to Grid</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="showAngles">
+                        <span>Show Angles</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Canvas Area -->
+            <div class="canvas-container">
+                <canvas id="diagramCanvas" width="800" height="600"></canvas>
+                <div class="canvas-info">
+                    <span id="canvasInfo">Click to add objects and forces</span>
+                </div>
+            </div>
+
+            <!-- Properties Panel -->
+            <div class="properties-panel">
+                <h3>Properties</h3>
+                <div id="propertiesContent">
+                    <p class="no-selection">Select an element to edit its properties</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Instructions: Add objects to the canvas, then add forces to them. Click on any element to select and edit its properties.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
